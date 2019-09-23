@@ -1,0 +1,984 @@
+[root@ip-172-31-36-22 tmp]#
+[root@ip-172-31-36-22 tmp]# git clone https://github.com/infocue/docker-infocue.git
+Cloning into 'docker-infocue'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+[root@ip-172-31-36-22 tmp]#
+[root@ip-172-31-36-22 tmp]# ls
+docker-infocue  systemd-private-88ca9fc3a4de46e7b37d29d6d5ab7ba2-chronyd.service-tXW5eV
+[root@ip-172-31-36-22 tmp]# cd docker-infocue/
+[root@ip-172-31-36-22 docker-infocue]# ls
+README.md
+[root@ip-172-31-36-22 docker-infocue]# touch f1
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# cd ..
+[root@ip-172-31-36-22 tmp]# git add .
+fatal: not a git repository (or any of the parent directories): .git
+[root@ip-172-31-36-22 tmp]# ls
+docker-infocue  systemd-private-88ca9fc3a4de46e7b37d29d6d5ab7ba2-chronyd.service-tXW5eV
+[root@ip-172-31-36-22 tmp]# cd docker-infocue/
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# git add .
+[root@ip-172-31-36-22 docker-infocue]# ls
+f1  README.md
+[root@ip-172-31-36-22 docker-infocue]# vi README.md
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# git add .
+[root@ip-172-31-36-22 docker-infocue]# # git add . ADD ALL THE FILES WHERE CHANGES WERE DONE EARLIER
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# git commit -m "First checkin"
+[master c78038e] First checkin
+ Committer: root <root@ip-172-31-36-22.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 2 insertions(+)
+ create mode 100644 f1
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# git push
+Username for 'https://github.com': baluk.kantala@gmail.com
+Password for 'https://baluk.kantala@gmail.com@github.com':
+Counting objects: 4, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 378 bytes | 378.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/infocue/docker-infocue.git
+   3a255e3..c78038e  master -> master
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# ls
+f1  README.md
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# git branch
+* master
+[root@ip-172-31-36-22 docker-infocue]# git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+[root@ip-172-31-36-22 docker-infocue]# git pull
+From https://github.com/infocue/docker-infocue
+ * [new branch]      infocue-branch01 -> origin/infocue-branch01
+Already up to date.
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/infocue-branch01
+  remotes/origin/master
+[root@ip-172-31-36-22 docker-infocue]# git branch
+* master
+[root@ip-172-31-36-22 docker-infocue]# git checkout infocue-branch01
+Branch 'infocue-branch01' set up to track remote branch 'infocue-branch01' from 'origin'.
+Switched to a new branch 'infocue-branch01'
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# git branch
+* infocue-branch01
+  master
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# ls
+f1  README.md
+[root@ip-172-31-36-22 docker-infocue]# rm -rf f1
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# touch f2 f3 f4
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# ls
+f2  f3  f4  README.md
+[root@ip-172-31-36-22 docker-infocue]# git add .
+[root@ip-172-31-36-22 docker-infocue]# git commit -m "Changes pushed"
+[infocue-branch01 2236e25] Changes pushed
+ Committer: root <root@ip-172-31-36-22.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ rename f1 => f2 (100%)
+ create mode 100644 f3
+ create mode 100644 f4
+[root@ip-172-31-36-22 docker-infocue]# git push
+Username for 'https://github.com': baluk.kantala@gmail.com
+Password for 'https://baluk.kantala@gmail.com@github.com':
+Counting objects: 2, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 286 bytes | 286.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/infocue/docker-infocue.git
+   c78038e..2236e25  infocue-branch01 -> infocue-branch01
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# ls
+f2  f3  f4  README.md
+[root@ip-172-31-36-22 docker-infocue]# git branch
+* infocue-branch01
+  master
+[root@ip-172-31-36-22 docker-infocue]# git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+[root@ip-172-31-36-22 docker-infocue]# git branch
+  infocue-branch01
+* master
+[root@ip-172-31-36-22 docker-infocue]# git checkout -b infocue-2
+Switched to a new branch 'infocue-2'
+[root@ip-172-31-36-22 docker-infocue]# git branch
+* infocue-2
+  infocue-branch01
+  master
+[root@ip-172-31-36-22 docker-infocue]# ls
+f1  README.md
+[root@ip-172-31-36-22 docker-infocue]# git stash
+No local changes to save
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# git branch
+* infocue-2
+  infocue-branch01
+  master
+[root@ip-172-31-36-22 docker-infocue]# git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/infocue/docker-infocue
+   c78038e..b02c736  master     -> origin/master
+Updating c78038e..b02c736
+Fast-forward
+ f1 => f2 | 0
+ f3       | 0
+ f4       | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ rename f1 => f2 (100%)
+ create mode 100644 f3
+ create mode 100644 f4
+[root@ip-172-31-36-22 docker-infocue]# ls
+f2  f3  f4  README.md
+[root@ip-172-31-36-22 docker-infocue]# git branch
+  infocue-2
+  infocue-branch01
+* master
+[root@ip-172-31-36-22 docker-infocue]# git infocue-2
+git: 'infocue-2' is not a git command. See 'git --help'.
+[root@ip-172-31-36-22 docker-infocue]# git checkout infocue-2
+Switched to branch 'infocue-2'
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# ls
+f1  README.md
+[root@ip-172-31-36-22 docker-infocue]# cd ..
+[root@ip-172-31-36-22 tmp]#
+[root@ip-172-31-36-22 tmp]#
+[root@ip-172-31-36-22 tmp]#
+[root@ip-172-31-36-22 tmp]#
+[root@ip-172-31-36-22 tmp]# git checkout master
+fatal: not a git repository (or any of the parent directories): .git
+[root@ip-172-31-36-22 tmp]# cd docker-infocue/
+[root@ip-172-31-36-22 docker-infocue]# git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+[root@ip-172-31-36-22 docker-infocue]# git checkout -b branch3
+Switched to a new branch 'branch3'
+[root@ip-172-31-36-22 docker-infocue]# git checkout branch3
+Already on 'branch3'
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# ls
+f2  f3  f4  README.md
+[root@ip-172-31-36-22 docker-infocue]# touch f6 t1 t2 t3
+[root@ip-172-31-36-22 docker-infocue]# ls
+f2  f3  f4  f6  README.md  t1  t2  t3
+[root@ip-172-31-36-22 docker-infocue]# git add .
+[root@ip-172-31-36-22 docker-infocue]# git commit -m "CLI to merge branches"
+[branch3 2ebd048] CLI to merge branches
+ Committer: root <root@ip-172-31-36-22.ap-south-1.compute.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f6
+ create mode 100644 t1
+ create mode 100644 t2
+ create mode 100644 t3
+[root@ip-172-31-36-22 docker-infocue]# git push
+fatal: The current branch branch3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin branch3
+
+[root@ip-172-31-36-22 docker-infocue]# git push --set-upstream origin branch3
+Username for 'https://github.com': baluk.kantala@gmail.com
+Password for 'https://baluk.kantala@gmail.com@github.com':
+Counting objects: 2, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 309 bytes | 309.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'branch3' on GitHub by visiting:
+remote:      https://github.com/infocue/docker-infocue/pull/new/branch3
+remote:
+To https://github.com/infocue/docker-infocue.git
+ * [new branch]      branch3 -> branch3
+Branch 'branch3' set up to track remote branch 'branch3' from 'origin'.
+[root@ip-172-31-36-22 docker-infocue]# git status
+On branch branch3
+Your branch is up to date with 'origin/branch3'.
+
+nothing to commit, working tree clean
+[root@ip-172-31-36-22 docker-infocue]# git logs
+git: 'logs' is not a git command. See 'git --help'.
+
+The most similar command is
+        log
+[root@ip-172-31-36-22 docker-infocue]# git log
+commit 2ebd048248d155b37265f2d14dad85f78c109aac (HEAD -> branch3, origin/branch3)
+Author: root <root@ip-172-31-36-22.ap-south-1.compute.internal>
+Date:   Sat Sep 21 03:41:31 2019 +0000
+
+    CLI to merge branches
+
+commit b02c736d2ddc456ff6f4dd666dae1abc0a9682f0 (origin/master, origin/HEAD, master)
+Merge: c78038e 2236e25
+Author: infocue <55610392+infocue@users.noreply.github.com>
+Date:   Sat Sep 21 09:00:00 2019 +0530
+
+    Merge pull request #1 from infocue/infocue-branch01
+
+    Changes pushed
+
+commit 2236e258542dca1620d383eb4e086eddb09afd84 (origin/infocue-branch01, infocue-branch01)
+Author: root <root@ip-172-31-36-22.ap-south-1.compute.internal>
+Date:   Sat Sep 21 03:17:14 2019 +0000
+
+    Changes pushed
+
+commit c78038ed9e687cc97ddb3443a13e512552c8ce8d (infocue-2)
+Author: root <root@ip-172-31-36-22.ap-south-1.compute.internal>
+Date:   Sat Sep 21 03:03:33 2019 +0000
+
+    First checkin
+
+commit 3a255e36e0ead5bd3bfcf6323e7246662bb5cc97
+Author: infocue <55610392+infocue@users.noreply.github.com>
+Date:   Sat Sep 21 08:06:53 2019 +0530
+
+    Initial commit
+[root@ip-172-31-36-22 docker-infocue]# git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+[root@ip-172-31-36-22 docker-infocue]# git merge branch3
+Updating b02c736..2ebd048
+Fast-forward
+ f6 | 0
+ t1 | 0
+ t2 | 0
+ t3 | 0
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f6
+ create mode 100644 t1
+ create mode 100644 t2
+ create mode 100644 t3
+[root@ip-172-31-36-22 docker-infocue]# git commit -m "Merge CLI"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[root@ip-172-31-36-22 docker-infocue]# git push
+Username for 'https://github.com': baluk.kantala@gmail.com
+Password for 'https://baluk.kantala@gmail.com@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/infocue/docker-infocue.git
+   b02c736..2ebd048  master -> master
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]#
+[root@ip-172-31-36-22 docker-infocue]# history
+    1  yum install docker -y
+    2  service docker start
+    3  service docker status
+    4  git clone
+    5  yum install git
+    6  git clone https://github.com/sequenceiq/docker-spark.git
+    7  ls
+    8  cd docker-spark/
+    9  ls
+   10  vi Dockerfile
+   11  ls
+   12  vi bootstrap.sh
+   13  ls
+   14  cd ..
+   15  ls
+   16  docker build -t spark:experian docker-spark/
+   17  cd docker-spark/
+   18  ls
+   19  cd yarn-remote-client/
+   20  ls
+   21  \cd ..
+   22  ls
+   23  vi Dockerfile
+   24  docker build -t spark:experian docker-spark/
+   25  docker build -t spark:experian .
+   26  vi Dockerfile
+   27  ls
+   28  vi Dockerfile
+   29  cd
+   30  git clone https://github.com/apache/spark.git
+   31  ls
+   32  cd spark/
+   33  ls
+   34  cd blob/master/resource-managers/kubernetes/docker/src/main/dockerfiles/spark/Dockerfile
+   35  cd resource-managers/kubernetes/docker/src/main/dockerfiles/spark/Dockerfile
+   36  cd resource-managers/kubernetes/docker/src/main/dockerfiles/spark/
+   37  ls
+   38  vi Dockerfile
+   39  ls
+   40  cd spark/
+   41  ls
+   42  cd 0~resource-managers/kubernetes/docker/src/main/dockerfiles/spark1~
+   43  cd 0~resource-managers/kubernetes/docker/src/main/dockerfiles/spark1
+   44  cd 0~resource-managers/kubernetes/docker/src/main/dockerfiles/spark
+   45  cd resource-managers/kubernetes/docker/src/main/dockerfiles/spark
+   46  ls
+   47  vi Dockerfile
+   48  ls
+   49  vi entrypoint.sh
+   50  docker build -t spark:trust .
+   51  vi Dockerfile
+   52  ls
+   53  cd bindings/
+   54  ls
+   55  cd ..
+   56  ls
+   57  docker build -t spark:trust .
+   58  wget http://spark.apache.org/downloads.html
+   59  ls
+   60  vi downloads.html
+   61  wget https://www.apache.org/dyn/closer.lua/spark/spark-2.4.3/spark-2.4.3-bin-hadoop2.7.tgz
+   62  ls
+   63  rm -rf downloads.html
+   64  tar -xvf spark-2.4.3-bin-hadoop2.7.tgz
+   65  tar xvf spark-2.4.3-bin-hadoop2.7.tgz
+   66  untar -xvf spark-2.4.3-bin-hadoop2.7.tgz
+   67  tar zxvf spark-2.4.3-bin-hadoop2.7.tgz
+   68  gunzip -c spark-2.4.3-bin-hadoop2.7.tgz | tar xvf -
+   69  tar zxvf spark-2.4.3-bin-hadoop2.7.tgz
+   70  tar -zxvf spark-2.4.3-bin-hadoop2.7.tgz
+   71  ls
+   72  curl -O https://www.apache.org/dyn/closer.lua/spark/spark-2.4.3/spark-2.4.3-bin-hadoop2.7.tgz
+   73  ls
+   74  tar xzf spark-2.4.3-bin-hadoop2.7.tgz
+   75  tar xvf spark-2.4.3-bin-hadoop2.7.tgz
+   76  ls
+   77  yum install tar
+   78  tar xvf spark-2.0.2-bin-hadoop2.7.tgz
+   79  ls
+   80  rm -rf spark-2.4.3-bin-hadoop2.7.tgz
+   81  cd
+   82  ls
+   83  curl -O https://www.apache.org/dyn/closer.lua/spark/spark-2.4.3/spark-2.4.3-bin-hadoop2.7.tgz
+   84  ls
+   85  ls -lart
+   86  tar zxvf  spark-2.4.3-bin-hadoop2.7.tgz
+   87  tar xvf spark-2.4.3-bin-hadoop2.7.tgz
+   88  curl -O https://www.apache.org/dyn/closer.lua/spark/spark-2.3.3/spark-2.3.3-bin-hadoop2.7.tgz
+   89  ls
+   90  tar xvf spark-2.3.3-bin-hadoop2.7.tgz
+   91  wget http://apache.mirror.anlx.net/spark/spark-2.4.3/spark-2.4.3-bin-hadoop2.7.tgz
+   92  ls
+   93  rm -rf spark-2.*
+   94  ls
+   95  wget http://apache.mirror.anlx.net/spark/spark-2.4.3/spark-2.4.3-bin-hadoop2.7.tgz
+   96  ls
+   97  tar xvf spark-2.4.3-bin-hadoop2.7.tgz
+   98  ls
+   99  cd spark-2.4.3-bin-hadoop2.7/
+  100  ls
+  101  cd ..
+  102  ls
+  103  cd ..
+  104  ls
+  105  cd
+  106  ls
+  107  cd -
+  108  cd
+  109  ls
+  110  mv spark-2.4.3-bin-hadoop2.7.tgz spark/resource-managers/kubernetes/docker/src/main/dockerfiles/spark
+  111  ls
+  112  cd spark/resource-managers/kubernetes/docker/src/main/dockerfiles/spark
+  113  ls
+  114  tar xvf spark-2.4.3-bin-hadoop2.7.tgz
+  115  docker build -t spark:experian
+  116  docker build -t spark:experian .
+  117  ls
+  118  vi Dockerfile
+  119  docker build -t spark:experian .
+  120  vi Dockerfile
+  121  pwd
+  122  vi Dockerfile
+  123  ls
+  124  cd spark-2.4.3-bin-hadoop2.7/
+  125  ls
+  126  cd ..
+  127  ls
+  128  vi Dockerfile
+  129  pwd
+  130  cd /root/spark/resource-managers/kubernetes/
+  131  ls
+  132  cd docker/
+  133  ls
+  134  cd ..
+  135  ls
+  136  cd integration-tests/
+  137  ls
+  138  pwd
+  139  cd /root/spark/resource-managers/kubernetes/docker/src/main/dockerfiles/spark
+  140  vi Dockerfile
+  141  ls
+  142  cd spark-2.4.3-bin-hadoop2.7/
+  143  ls
+  144  cd data/
+  145  ls
+  146  cd ..
+  147  ls
+  148  cd ..
+  149  ls
+  150  vi Dockerfile
+  151  docker build -t spark:experian .
+  152  cd /root/spark/resource-managers/kubernetes/integration-tests/tests
+  153  ls
+  154  cd ..
+  155  ls
+  156  mv tests /root/spark/resource-managers/kubernetes/docker/src/main/dockerfiles/spark/
+  157  ls
+  158  cd /root/spark/resource-managers/kubernetes/docker/src/main/dockerfiles/spark
+  159  ls
+  160  vi Dockerfile
+  161  docker build -t spark:experian .
+  162  vi Dockerfile
+  163  docker build -t spark:experian .
+  164  docker run -it -d 6ba41762dbd6
+  165  docker ps
+  166  docker ps -a
+  167  docker log dbeed4ea9c86
+  168  docker logs dbeed4ea9c86
+  169  docker run -it 6ba41762dbd6
+  170  ls
+  171  vi entrypoint.sh
+  172  docker build -t spark1:experian .
+  173  docker run -it c49b6395355a
+  174  docker ps
+  175  docker ps -a
+  176  docker logs 48ac36651bf1
+  177  docker ps
+  178  service docker start
+  179  ls
+  180  docker images
+  181  ls
+  182  cd spark
+  183  ls
+  184  cd resource-managers/
+  185  ls
+  186  cd kubernetes/
+  187  ls
+  188  cd docker/
+  189  ls
+  190  cd src/
+  191  ls
+  192  cd main/
+  193  ls
+  194  cd dockerfiles/
+  195  ls
+  196  cd spark/
+  197  ls
+  198  vi Dockerfile
+  199  ls
+  200  cp Dockerfile Dockerfile1
+  201  vi Dockerfile
+  202  rm rf Dockerfile
+  203  ls
+  204  vi Dockerfile1
+  205  vi Dockerfile
+  206  docker build -t spark:experian .
+  207  vi Dockerfile
+  208  docker build -t spark:experian .
+  209  vi Dockerfile
+  210  docker build -t spark:experian .
+  211  vi Dockerfile
+  212  docker build -t spark:experian .
+  213  vi Dockerfile
+  214  docker build -t spark:experian .
+  215  docker images
+  216  docker run -it 79329c883e05
+  217  docker ps
+  218  vi entrypoint.sh
+  219  ls
+  220  vi entrypoint.sh
+  221  vi DO
+  222  vi Dockerfile
+  223  docker build -t spark:experian1 .
+  224  ls
+  225  cd spark/resource-managers/kubernetes/docker/src/main/dockerfiles/spark/
+  226  ls
+  227  vi Dockerfile1
+  228  docker images
+  229  docker run -it 355e439dede2
+  230  docker pa
+  231  docker ps
+  232  pwd
+  233  ls
+  234  mkdir docker
+  235  cd docker
+  236  ls
+  237  git clone https://github.com/radanalyticsio/openshift-spark.git
+  238  ls
+  239  cd openshift-spark/
+  240  ls
+  241  cat README.md
+  242  ls
+  243  cd
+  244  pwd
+  245  ls
+  246  mkdir keerthi
+  247  cd keerthi/
+  248  ls
+  249  vi config
+  250  ls
+  251  vi test.sh
+  252  vi test.sh
+  253  ls
+  254  vi test.sh
+  255  vi config
+  256  pwd
+  257  vi test.sh
+  258  sh test.sh
+  259  ls
+  260  vi config
+  261  vi test.sh
+  262  sh test.sh
+  263  vi config
+  264  ls
+  265  vi config
+  266  vi test.sh
+  267  cat config
+  268  sh test.sh
+  269  cat config
+  270  vi config
+  271  vi test.sh
+  272  vi config
+  273  vi test.sh
+  274  sh test.sh
+  275  vi test.sh
+  276  sh test.sh
+  277  vi test.sh
+  278  sh test.sh
+  279  cat config
+  280  sh test.sh
+  281  vi test.sh
+  282  sh test.sh
+  283  cat config
+  284  vi test.sh
+  285  sh test.sh
+  286  cat config
+  287  vi test.sh
+  288  sh test.sh
+  289  cat config
+  290  vi test.sh
+  291  sh test.sh
+  292  cat config
+  293  vi test.sh
+  294  sh test.sh
+  295  cat config
+  296  sh test.sh
+  297  vi test.sh
+  298  sh test.sh
+  299  cat config
+  300  sh test.sh
+  301  vi test.sh
+  302  sh test.sh
+  303  cat config
+  304  vi test.sh
+  305  sh test.sh
+  306  vi test.sh
+  307  sh test.sh
+  308  cat config
+  309  sh test.sh
+  310  vi test.sh
+  311  sh test.sh
+  312  cat config
+  313  vi test.sh
+  314  sh test.sh
+  315  cat config
+  316  cat test.sh
+  317  vi test.sh
+  318  sh test.sh
+  319  cat config
+  320  vi test.sh
+  321  sh test.sh
+  322  cat config
+  323  vi test.sh
+  324  sh test.sh
+  325  cat config
+  326  sh test.sh
+  327  cat config
+  328  sh test.sh
+  329  vi test.sh
+  330  vi config
+  331  vi test.sh
+  332  sh test.sh
+  333  cat config
+  334  vi test.sh
+  335  vi config
+  336  sh test.sh
+  337  cat config
+  338  vi config
+  339  vi test.sh
+  340  vi config
+  341  sh test.sh
+  342  cat config
+  343  vi config
+  344  vi test.sh
+  345  sh test.sh
+  346  cat config
+  347  vi test.sh
+  348  vi config
+  349  sh test.sh
+  350  cat config
+  351  vi test.sh
+  352  vi config
+  353  sh test.sh
+  354  cat config
+  355  vi config
+  356  vi test.sh
+  357  cat config
+  358  sh test.sh
+  359  cat config
+  360  cat test.sh
+  361  vi test.sh
+  362  vi config
+  363  sh test.sh
+  364  vi test.sh
+  365  sh test.sh
+  366  cat config
+  367  vi test.sh
+  368  ls
+  369  cd spark
+  370  ls
+  371  pwd
+  372  ls
+  373  cd
+  374  ls
+  375  cd docker-spark/
+  376  ls
+  377  vi Dockerfile
+  378  vi bootstrap.sh
+  379  cd
+  380  ls
+  381  cd /opt/
+  382  ls
+  383  mkdir spark
+  384  cd spark/
+  385  ls
+  386  git clone https://github.com/radanalyticsio/openshift-spark.git
+  387  ls
+  388  cd openshift-spark/
+  389  ls
+  390  cd openshift-spark-build-py36
+  391  ls
+  392  cat Dockerfile
+  393  cd
+  394  ls
+  395  cd docker-spark/
+  396  ls
+  397  vi bootstrap.sh
+  398  cd /opt/spark/openshift-spark/openshift-spark-build-py36
+  399  ls
+  400  cd modules/
+  401  ls
+  402  cd spark/
+  403  ls
+  404  cd added/
+  405  ls
+  406  vi spark-entrypoint.sh
+  407  ls
+  408  cd ..
+  409  ls
+  410  cd ..
+  411  ls
+  412  cd metrics/
+  413  ls
+  414  cd added/
+  415  ls
+  416  cd ..
+  417  ls
+  418  cd ..
+  419  ls
+  420  cd s2i/
+  421  ls
+  422  cd added/
+  423  ls
+  424  cd ../../..
+  425  ls
+  426  vi Dockerfile
+  427  cd ~/docker-spark/
+  428  ls
+  429  vi Dockerfile
+  430  cd -
+  431  ls
+  432  vi Dockerfile
+  433  ls
+  434  docker build -t spark:trust .
+  435  service docker start
+  436  docker build -t spark:trust .
+  437  vi Dockerfile
+  438  docker build -t spark:trust .
+  439  docker images
+  440  docker run -it 8c7f775ca6a2
+  441  docker run -it -d 8c7f775ca6a2
+  442  docker ps
+  443  docker exec -it 7ce3cc61735d /bin/bash
+  444  docker ps
+  445  docker logs 7ce3cc61735d
+  446  curl http://7ce3cc61735d:8080
+  447  ls
+  448  vi Dockerfile
+  449  docker exec -it 7ce3cc61735d /launch.sh
+  450  docker ps
+  451  ls
+  452  docker ps
+  453  docker tag 8c7f775ca6a2 peerclasses/spark:1
+  454  docker images
+  455  docker push peerclasses/spark:1
+  456  docker login
+  457  docker push peerclasses/spark:1
+  458  ls
+  459  cd /opt/spark/openshift-spark/openshift-spark-build-py36
+  460  ls
+  461  vi Dockerfile
+  462  docker build -t peerclasses/spark:2
+  463  docker build -t peerclasses/spark:2 .
+  464  docker images
+  465  docker push peerclasses/spark:2
+  466  vi Dockerfile
+  467  docker build -t peerclasses/spark:3 .
+  468  vi Dockerfile
+  469  docker build -t peerclasses/spark:3 .
+  470  cd
+  471  pwd
+  472  mkdir python
+  473  docker ps
+  474  docker images
+  475  docker run -it 67fa590cfc1c
+  476  vi Dockerfile
+  477  ls
+  478  mv Dockerfile python/
+  479  cd python/
+  480  ls
+  481  docker build -t centos:python .
+  482  vi Dockerfile
+  483  docker build -t centos:python .
+  484  docker pull centos/python-35-centos7
+  485  docker ps
+  486  docker rm -f 289cc8a9935c
+  487  docker pull centos/python-35-centos7
+  488  ocker images
+  489  ls
+  490  docker images
+  491  docker rmi 6ba41762dbd6 a3562aa0b991 cad3e2519923
+  492  docker rmi -f 6ba41762dbd6 a3562aa0b991 cad3e2519923
+  493  docker images
+  494  df -Th
+  495  ls
+  496  cd
+  497  ls
+  498  rm -rf spark-2.4.3-bin-hadoop2.7/
+  499  rm -rf docker-spark
+  500  df -h
+  501  docker pull centos/python-35-centos7
+  502  ls
+  503  rm -rf spark/
+  504  ls
+  505  cd docker/
+  506  ls
+  507  cd openshift-spark/
+  508  ls
+  509  cd ..
+  510  ls
+  511  rm -rf openshift-spark/
+  512  ls
+  513  cd
+  514  df -Th
+  515  docker pull centos/python-35-centos7
+  516  cd /opt/
+  517  ls
+  518  cd spark/
+  519  ls
+  520  cd openshift-spark/
+  521  ls
+  522  cd openshift-spark-build-py36
+  523  ls
+  524  vi Dockerfile
+  525  docker images
+  526  vi Dockerfile
+  527  docke build -t peerclasses/spark:3
+  528  docke build -t peerclasses/spark:3 .
+  529  docker build -t peerclasses/spark:3 .
+  530  vi Dockerfile
+  531  docker build -t peerclasses/spark:3 .
+  532  ls
+  533  df -Th
+  534  lsblk
+  535  df -Th
+  536  docker build -t peerclasses/spark:3 .
+  537  exit
+  538  df -Th
+  539  lsblk
+  540  exit
+  541  cd /opt/spark/openshift-spark/openshift-spark-build-py36
+  542  ls
+  543  cd ..
+  544  ls
+  545  exit
+  546  ls
+  547  mv /home/ec2-user/saprk.pem .
+  548  scp -i saprk.pem /opt/spark/openshift-spark/openshift-spark-build-py36 ec2-user@172.31.13.252
+  549  scp -i saprk.pem /opt/spark/openshift-spark/openshift-spark-build-py36 ec2-user@172.31.13.252:/home/ec2-user/
+  550  scp -i saprk.pem /opt/spark/openshift-spark/openshift-spark-build-py36/* ec2-user@172.31.13.252:/home/ec2-user/openshift-spark-build-py36
+  551  scp -i saprk.pem /opt/spark/openshift-spark/openshift-spark-build-py36/* ec2-user@172.31.13.252:/home/ec2-user/openshift-spark-build-py36/
+  552  scp -i saprk.pem /opt/spark/openshift-spark/openshift-spark-build-py36/* ec2-user@172.31.13.252:/home/ec2-user/
+  553  scp -r -i saprk.pem /opt/spark/openshift-spark/openshift-spark-build-py36 ec2-user@172.31.13.252:/home/ec2-user/
+  554  exit
+  555  yum install git -y
+  556  git
+  557  ls
+  558  cd
+  559  cd /tmp
+  560  ls
+  561  git clone https://github.com/infocue/docker-infocue.git
+  562  ls
+  563  cd docker-infocue/
+  564  ls
+  565  touch f1
+  566  cd ..
+  567  git add .
+  568  ls
+  569  cd docker-infocue/
+  570  git add .
+  571  ls
+  572  vi README.md
+  573  git add .
+  574  # git add . ADD ALL THE FILES WHERE CHANGES WERE DONE EARLIER
+  575  git commit -m "First checkin"
+  576  git push
+  577  ls
+  578  git branch
+  579  git branch -a
+  580  git pull
+  581  git branch -a
+  582  git branch
+  583  git checkout infocue-branch01
+  584  git branch
+  585  ls
+  586  rm -rf f1
+  587  touch f2 f3 f4
+  588  ls
+  589  git add .
+  590  git commit -m "Changes pushed"
+  591  git push
+  592  ls
+  593  git branch
+  594  git checkout master
+  595  git branch
+  596  git checkout -b infocue-2
+  597  git branch
+  598  ls
+  599  git stash
+  600  git branch
+  601  git checkout master
+  602  git pull
+  603  ls
+  604  git branch
+  605  git infocue-2
+  606  git checkout infocue-2
+  607  ls
+  608  cd ..
+  609  git checkout master
+  610  cd docker-infocue/
+  611  git checkout master
+  612  git checkout -b branch3
+  613  git checkout branch3
+  614  ls
+  615  touch f6 t1 t2 t3
+  616  ls
+  617  git add .
+  618  git commit -m "CLI to merge branches"
+  619  git push
+  620  git push --set-upstream origin branch3
+  621  git status
+  622  git logs
+  623  git log
+  624  git checkout master
+  625  git merge branch3
+  626  git commit -m "Merge CLI"
+  627  git push
+  628  history
+[root@ip-172-31-36-22 docker-infocue]#

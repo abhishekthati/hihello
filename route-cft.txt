@@ -1,0 +1,13 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "myRoute": {
+      "Type": "AWS::EC2::Route",
+      "Properties": {
+        "RouteTableId": "Your-Route-table-id",
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": "Your-gateway-id"
+      }
+    }
+  }
+}

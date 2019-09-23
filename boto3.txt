@@ -1,0 +1,39 @@
+
+
+import boto3
+
+client = boto3.client('ec2')
+
+
+
+
+response = client.create_subnet(
+    AvailabilityZone='string',
+    CidrBlock='string',
+    Ipv6CidrBlock='string',
+    VpcId='string',
+    DryRun=True|False
+)
+
+
+
+EXAMPLE:
+
+
+
+
+
+import boto3
+
+ec2 = boto3.client('ec2')
+
+
+response = ec2.create_subnet(
+    AvailabilityZone='ap-south-1a',
+    Awsregion=
+    CidrBlock='12.11.0.0/16',
+    VpcId='vpc-08fd736dafdfe5b4c',
+    DryRun=True
+)
+
+print(subnet)
